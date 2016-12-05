@@ -1,0 +1,86 @@
+$primary-font:    'Greycliff CF', Helvetica, sans-serif
+$primary-color: #2A2C2D
+$secondary-color: #EBAF91
+$tertiary-color: #F0EBE6
+
+*
+  font: 14px sans-serif
+  -webkit-appearance: none
+  -moz-appearance: none
+  outline: none
+  font-family: $primary-font
+
+.box
+  margin: 0 0 15px 0
+  width: 300px
+  padding: 15px
+  display: flex
+  border-radius: 5px
+  background: $tertiary-color
+
+  input
+    width: 200px
+    border: none
+    outline: none
+    background: none
+    margin-left: 20px
+    color: $primary-color
+
+  label
+    text-transform: uppercase
+    width: 130px
+    color: $primary-color
+    border-right: 1px solid $primary-color
+
+body
+  margin: 20px
+  width: 330px
+  background: $primary-color
+  display: flex
+  flex-direction: column
+  height: 400px
+
+.color-display
+  width: 332px
+  border-radius: 50px
+
+output
+  min-height: 80px
+  min-width: 330px
+  display: flex
+  border-radius: 5px
+  justify-content: center
+  align-items: center
+
+  strong
+    font-size: 40px
+
+#results
+  padding: 20px
+  text-align: center
+  color: #fff
+  height: 60px
+  @extend .center
+
+button
+  background: none
+  padding: 15px
+  width: 332px
+  font-weight: 700
+  border: none
+  text-transform: uppercase
+  color: $primary-color
+  background: $secondary-color
+  border-radius: 5px
+  box-shadow: 0 0 20px 0 rgba(0,0,0,0.5)
+  text-decoration: none
+  display: flex
+  justify-content: center
+  align-items: center
+  font-weight: 700
+
+.center
+  display: flex
+  justify-content: center
+  align-items: center
+  flex-direction: column

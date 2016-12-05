@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <link href="styles.min.css" rel="stylesheet">
+    <script src="prefixfree.min.js"></script>
+  </head>
+  <body>
+    <div class="center">
+      <output tabindex="0">
+      	<strong>?</strong>
+      	<span class="error"></span>
+      </output>
+      <section id="results"></section>
+    </div>
+    <section class="box">
+      <label>Foreground</label>
+      <input id="foreground" value="#444" autofocus />
+    </section>
+    <section class="box">
+      <label>Background</label>
+      <input id="background" value="white" autofocus />
+    </section>
+
+    <section class="color-display" id="backgroundDisplay"></section>
+    <section class="color-display" id="foregroundDisplay"><button id="swap">Swap colors</button></section>
+
+  </body>
+
+  <script src="https://leaverou.github.com/incrementable/incrementable.js" id="incrementable" async></script>
+  <script src="color.js"></script>
+  <script src="contrast-ratio.js"></script>
+
+</html>
