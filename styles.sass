@@ -1,7 +1,7 @@
 $primary-font:    'Greycliff CF', Helvetica, sans-serif
-$primary-color: #2A2C2D
-$secondary-color: #EBAF91
-$tertiary-color: #F0EBE6
+$primary-color: #222
+$secondary-color: #44FFF5
+$tertiary-color: #FFFFFF
 
 *
   font: 14px sans-serif
@@ -12,45 +12,51 @@ $tertiary-color: #F0EBE6
 
 .box
   margin: 0 0 15px 0
-  width: 330px
+  width: 200px
+  border: 1px solid $primary-color
   padding: 15px
   display: flex
   border-radius: 5px
-  background: $tertiary-color
+  justify-content: space-between
+
 
   input
-    width: 200px
+    width: 100px
     border: none
     outline: none
     background: none
     margin-left: 20px
     color: $primary-color
+    text-transform: uppercase
+    font-weight: 700
+    text-align: right
 
   label
     text-transform: uppercase
     width: 130px
     color: $primary-color
-    border-right: 1px solid $primary-color
+    text-transform: uppercase
 
 body
   margin: 20px
-  width: 360px
-  background: $primary-color
+  width: 250px
   display: flex
   flex-direction: column
   height: 400px
 
 .color-display
-  width: 332px
+  width: 232px
   border-radius: 50px
 
 output
   min-height: 80px
-  min-width: 360px
+  min-width: 230px
+  width: 230px
   display: flex
   border-radius: 5px
   justify-content: center
   align-items: center
+  background: #fff !important
 
   strong
     font-size: 40px
@@ -58,21 +64,21 @@ output
 #results
   padding: 20px
   text-align: center
-  color: #fff
+  color: #222
   height: 60px
   @extend .center
 
 button
   background: none
   padding: 15px
-  width: 362px
+  width: 232px
   font-weight: 700
   border: none
   text-transform: uppercase
   color: $primary-color
   background: $secondary-color
   border-radius: 5px
-  box-shadow: 0 0 20px 0 rgba(0,0,0,0.5)
+  box-shadow: 0 0 10px 0 rgba(0,0,0,0.2)
   text-decoration: none
   display: flex
   justify-content: center
@@ -84,3 +90,4 @@ button
   justify-content: center
   align-items: center
   flex-direction: column
+  width: 230px

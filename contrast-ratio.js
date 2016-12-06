@@ -147,20 +147,6 @@ function update() {
 			results.textContent = '';
 			results.appendChild(fragment);
 
-			// Create gradient illustrating levels
-			var stops = [], previousPercentage = 0;
-
-			for (var i=0; i < 2 * percentages.length; i++) {
-				var info = percentages[i % percentages.length];
-
-				var level = info.level;
-				var color = levels[level].color,
-				    percentage = previousPercentage + info.percentage / 2;
-
-				stops.push(color + ' ' + previousPercentage + '%', color + ' ' + percentage + '%');
-
-				previousPercentage = percentage;
-			}
 
 		}
 	}
@@ -226,11 +212,11 @@ foreground.oninput = function() {
 };
 
 function changeBackground(obj) {
-  document.getElementById("results").style.background = document.getElementById("background").value;
+  document.getElementById("swap").style.background = document.getElementById("background").value;
 }
 
 function changeForeground(obj) {
-  document.getElementById("results").style.color = document.getElementById("foreground").value;
+  document.getElementById("swap").style.color = document.getElementById("foreground").value;
 }
 
 swap.onclick = function() {
@@ -241,8 +227,8 @@ swap.onclick = function() {
 	colorChanged(background);
 	colorChanged(foreground);
 
-	document.getElementById("results").style.background = document.getElementById("background").value;
-	document.getElementById("results").style.color = document.getElementById("foreground").value;
+	document.getElementById("swap").style.background = document.getElementById("background").value;
+	document.getElementById("swap").style.color = document.getElementById("foreground").value;
 
 	update();
 };
