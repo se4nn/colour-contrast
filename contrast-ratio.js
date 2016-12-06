@@ -226,11 +226,11 @@ foreground.oninput = function() {
 };
 
 function changeBackground(obj) {
-  document.getElementById("results").style.background = obj.value;
+  document.getElementById("results").style.background = document.getElementById("background").value;
 }
 
 function changeForeground(obj) {
-  document.getElementById("results").style.color = obj.value;
+  document.getElementById("results").style.color = document.getElementById("foreground").value;
 }
 
 swap.onclick = function() {
