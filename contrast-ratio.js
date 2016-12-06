@@ -11,7 +11,7 @@ function $$(expr, con) {
 $$('[id]').forEach(function(element) { window[element.id] = element; });
 
 var messages = {
-	'semitransparent': 'The background is semi-transparent, so the contrast ratio cannot be precise. Depending on what’s going to be underneath, it could be any of the following:',
+	'semitransparent': 'The background is semi-transparent, so the contrast ratio cannot be precise.',
 	'fail': 'Fails 😩',
 	'aa-large': 'Only passes for large text (above 18pt or bold above 14pt)',
 	'aa': 'Passes AA level for any size text and AAA for large text (above 18pt or bold above 14pt)',
