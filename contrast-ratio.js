@@ -241,6 +241,9 @@ swap.onclick = function() {
 	colorChanged(background);
 	colorChanged(foreground);
 
+	document.getElementById("results").style.background = document.getElementById("background").value;
+	document.getElementById("results").style.color = document.getElementById("foreground").value;
+
 	update();
 };
 
