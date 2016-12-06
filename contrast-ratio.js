@@ -225,6 +225,14 @@ foreground.oninput = function() {
 	}
 };
 
+function changeBackground(obj) {
+  document.getElementById("results").style.background = obj.value;
+}
+
+function changeForeground(obj) {
+  document.getElementById("results").style.color = obj.value;
+}
+
 swap.onclick = function() {
 	var backgroundColor = background.value;
 	background.value = foreground.value;

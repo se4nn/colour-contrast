@@ -1,7 +1,7 @@
 {
-  "name": "example-menubar-app",
+  "name": "Contrastr",
   "version": "0.0.1",
-  "description": "example menubar electron app",
+  "description": "A simple colour contrast tester",
   "dependencies": {
     "menubar": "*"
   },
