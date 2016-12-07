@@ -161,7 +161,7 @@ function colorChanged(input) {
 	var previousColor = getComputedStyle(display).backgroundColor;
 
 	// Match a 6 digit hex code, add a hash in front.
-	if(input.value.match(/^[0-9a-f]{6}$/i)) {
+	if(input.value.match(/^[0-9a-f]{3}$/i)) {
 		input.value = '#' + input.value;
 	}
 
@@ -199,6 +199,14 @@ function hashchange() {
 	background.oninput();
 	foreground.oninput();
 }
+
+const remote = require('electron').remote;
+
+document.getElementById("closeBtn").addEventListener("click", function (e) {
+	var window = remote.getCurrentWindow();
+	window.close();
+	app.quit();
+});
 
 background.oninput =
 foreground.oninput = function() {
