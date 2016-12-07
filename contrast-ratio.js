@@ -153,8 +153,6 @@ function update() {
 }
 
 function colorChanged(input) {
-	input.style.width = input.value.length * .56 + 'em';
-	input.style.width = input.value.length + 'ch';
 
 	var isForeground = input == foreground;
 
@@ -213,10 +211,12 @@ foreground.oninput = function() {
 
 function changeBackground(obj) {
   document.getElementById("swap").style.background = document.getElementById("background").value;
+	document.getElementById("backgroundDot").style.background = document.getElementById("background").value;
 }
 
 function changeForeground(obj) {
   document.getElementById("swap").style.color = document.getElementById("foreground").value;
+	document.getElementById("foregroundDot").style.background = document.getElementById("foreground").value;
 }
 
 swap.onclick = function() {
@@ -229,6 +229,8 @@ swap.onclick = function() {
 
 	document.getElementById("swap").style.background = document.getElementById("background").value;
 	document.getElementById("swap").style.color = document.getElementById("foreground").value;
+	document.getElementById("foregroundDot").style.background = document.getElementById("foreground").value;
+	document.getElementById("backgroundDot").style.background = document.getElementById("background").value;
 
 	update();
 };

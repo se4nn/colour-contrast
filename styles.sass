@@ -1,4 +1,4 @@
-$primary-font:    'Greycliff CF', Helvetica, sans-serif
+$primary-font:    'HK Grotesk', Helvetica, sans-serif
 $primary-color: #222
 $secondary-color: #44FFF5
 $tertiary-color: #FFFFFF
@@ -21,7 +21,7 @@ $tertiary-color: #FFFFFF
 
 
   input
-    width: 100px
+    width: 75px
     border: none
     outline: none
     background: none
@@ -34,8 +34,25 @@ $tertiary-color: #FFFFFF
   label
     text-transform: uppercase
     width: 130px
+    font-size: 12px
+    margin-top: 3px
     color: $primary-color
     text-transform: uppercase
+
+  span
+    width: 16px
+    height: 16px
+    min-width: 16px
+    min-height: 16px
+    border-radius: 50%
+    margin-left: 10px
+    border: 1px solid $primary-color
+
+#foregroundDot
+  background: $primary-color
+
+#backgroundDot
+  background: $secondary-color
 
 body
   margin: 20px
@@ -49,9 +66,9 @@ body
   border-radius: 50px
 
 output
-  min-height: 80px
   min-width: 230px
   width: 230px
+  margin-top: 20px
   display: flex
   border-radius: 5px
   justify-content: center
@@ -60,12 +77,14 @@ output
 
   strong
     font-size: 40px
+    font-weight: 700
 
 #results
   padding: 20px
   text-align: center
   color: #222
   height: 60px
+  overflow: hidden
   @extend .center
 
 button
@@ -78,7 +97,7 @@ button
   color: $primary-color
   background: $secondary-color
   border-radius: 5px
-  box-shadow: 0 0 10px 0 rgba(0,0,0,0.2)
+  border: 1px solid #eee
   text-decoration: none
   display: flex
   justify-content: center

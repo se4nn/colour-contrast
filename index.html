@@ -8,7 +8,7 @@
     <link href="styles.min.css" rel="stylesheet">
     <script src="prefixfree.min.js"></script>
   </head>
-  <body>
+  <body onload="changeForeground(); changeBackground();">
     <div class="center">
       <output tabindex="0">
       	<strong>?</strong>
@@ -19,10 +19,12 @@
     <section class="box">
       <label>Foreground</label>
       <input id="foreground" value="#222" autofocus onclick="changeForeground();" onkeyup="changeForeground();" />
+      <span id="foregroundDot"></span>
     </section>
     <section class="box">
       <label>Background</label>
       <input id="background" value="#44FFF5" autofocus onclick="changeBackground();" onkeyup="changeBackground();" />
+      <span id="backgroundDot"></span>
     </section>
 
     <section class="color-display" id="backgroundDisplay"></section>
