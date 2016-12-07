@@ -11,11 +11,11 @@ function $$(expr, con) {
 $$('[id]').forEach(function(element) { window[element.id] = element; });
 
 var messages = {
-	'semitransparent': 'The background is semi-transparent, so the contrast ratio cannot be precise.',
+	'error': 'Please enter valid colours 🎨',
 	'fail': 'Fails 😩',
-	'aa-large': 'Only passes for large text (above 18pt or bold above 14pt)',
-	'aa': 'Passes AA level for any size text and AAA for large text (above 18pt or bold above 14pt)',
-	'aaa': 'Passes AAA level for any size text'
+	'aa-large': 'Only passes for large text (above 18pt or bold above 14pt) 🗣',
+	'aa': 'Passes AA level for any size text and AAA for large text (above 18pt or bold above 14pt) 😀',
+	'aaa': 'Passes AAA level for any size text 🎉'
 };
 
 incrementable.onload = function() {
@@ -106,17 +106,6 @@ function update() {
 
 		$('strong', output).textContent = contrast.ratio;
 
-		var error = $('.error', output);
-
-		if (contrast.error) {
-			error.textContent = '±' + contrast.error;
-			error.title = min + ' - ' + max;
-		}
-		else {
-			error.textContent = '';
-			error.title = '';
-		}
-
 		if (classes.length <= 1) {
 			results.textContent = messages[classes[0]];
 			output.style.backgroundImage = '';
@@ -126,23 +115,11 @@ function update() {
 			var fragment = document.createDocumentFragment();
 
 			var p = document.createElement('p');
-			p.textContent = messages.semitransparent;
+			p.textContent = messages.error;
 			fragment.appendChild(p);
 
-			var ul = document.createElement('ul');
 
-
-			var message = '<p></p><ul>';
-
-			for (var i=0; i<classes.length; i++) {
-				var li = document.createElement('li');
-
-				li.textContent = messages[classes[i]];
-
-				ul.appendChild(li);
-			}
-
-			fragment.appendChild(ul);
+			var message = '<p></p>';
 
 			results.textContent = '';
 			results.appendChild(fragment);
@@ -160,7 +137,7 @@ function colorChanged(input) {
 
 	var previousColor = getComputedStyle(display).backgroundColor;
 
-	// Match a 6 digit hex code, add a hash in front.
+	// Match a 3 digit hex code, add a hash in front.
 	if(input.value.match(/^[0-9a-f]{3}$/i)) {
 		input.value = '#' + input.value;
 	}
@@ -200,12 +177,11 @@ function hashchange() {
 	foreground.oninput();
 }
 
-	//const remote = require('electron').remote;
-
-	//document.getElementById("closeBtn").addEventListener("click", function (e) {
-		//var window = remote.getCurrentWindow();
-		//window.close();
-	//});
+document.getElementById("closeBtn").addEventListener("click", function (e) {
+	var remote = require( 'remote' );
+	var app = remote.require( 'app' );
+	app.quit()
+});
 
 background.oninput =
 foreground.oninput = function() {
